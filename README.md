@@ -2,6 +2,20 @@
 
 ## 字體
 
-### `Cascadia Code` 以及 `Cascadia Code Next TC` 
+### `Cascadia Code` 、 `Caesium` 以及 `Cascadia Code Next TC` 合成為 `Barium Mono`
 
 #### 元素週期表
+輸入
+```
+氫　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　氦
+鋰鈹                        　　　　　　　　　　　　硼碳氮氧氟氖
+鈉鎂                        　　　　　　　　　　　　鋁矽磷硫氯氬
+鉀鈣              　　　　　　　鈧鈦釩鉻錳鐵鈷鎳銅鋅鎵鍺砷硒溴氪
+銣鍶              　　　　　　　釔鋯鈮鉬鎝釕銠鈀銀鎘銦錫銻碲碘氙
+銫鋇鑭鈰鐠釹鉕釤銪釓鋱鏑鈥鉺銩鐿鎦鉿鉭鎢錸鋨銥鉑金汞鉈鉛鉍釙砈氡
+鍅鐳錒釷鏷鈾錼鈽鋂鋦鉳鎦鑀鐨鍆鍩鐒鑪𨧀𨭎𨨏𨭆䥑鐽錀鎶鉨鈇鏌鉝鿬鿫
+```
+
+![元素週期表圖](./readme_img/ptable.png)
+![元素週期表圖（SVG）](./readme_img/ptable.svg)
+
