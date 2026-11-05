@@ -15,7 +15,7 @@
         src: url("../fonts/barium/BariumMonoRegular.ttf");
     }
     text {
-        font-family: 'Barium', monospace;
+        font-family: 'Barium';
     }
     </style>
 </svg>
