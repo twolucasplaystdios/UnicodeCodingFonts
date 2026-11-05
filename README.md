@@ -1,25 +1,7 @@
-<p align="center"> 
-  中文漢字增加中 
-  <br/> 
-</p>
-<p align="center"> 
-  
-  ![副](https://img.shields.io/badge/Coverage-No_Data-grey)
-  
-  [建議及問題](https://github.com/twolucasplaystdios/Barium/issues)
-  
-  
-</p>
+# 等寬字體漢字補充計畫
 
+## 字體
 
-# Barium [WIP]
-A successor of Caesium & Cascadia code (If its legal).
+### `Cascadia Code` 以及 `Cascadia Code Next` TC
 
-## Features
-
-
-## TODO
-- [ ] Add other languages such as Arabic / Hebrew.
-- [ ] Add Chinese characters
-- [ ] Add ligatures
-- [ ] Add italic variants
+#### 元素週期表
