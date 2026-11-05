@@ -1,0 +1,21 @@
+# Python
+.venv/
+
+__pycache__/
+
+# Locals
+.env
+.env.local
+.env.*.local
+
+# VS Code Settings / Configs
+
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Git
+
+.git/
