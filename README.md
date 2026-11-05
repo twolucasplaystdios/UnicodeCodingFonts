@@ -16,8 +16,9 @@
 **元素週期表（漢字）**
 ![元素週期表](/readme_img/barium/p_table_sim.png)
 
-**程式預覽：程式由AI撰寫**
+**程式預覽：程式由AI撰寫（`/old/`）**
 ![程式預覽](/readme_img/barium/sim_monokai.png)
 
 #### 設定
 
+[設定](/fonts/barium/README.md)
