@@ -11,11 +11,11 @@
 
     <style>
     @font-face {
-        font-family: 'Barium';
+        font-family: "Barium Mono";
         src: url("../fonts/barium/BariumMonoRegular.ttf");
     }
     text {
-        font-family: 'Barium';
+        font-family: "Barium Mono";
     }
     </style>
 </svg>
