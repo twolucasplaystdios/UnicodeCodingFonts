@@ -10,10 +10,6 @@
     </text>
 
     <style>
-    @font-face {
-        font-family: "Barium Mono";
-        src: url("../fonts/barium/BariumMonoRegular.ttf") format("truetype");
-    }
     text {
         font-family: "Barium Mono";
     }
