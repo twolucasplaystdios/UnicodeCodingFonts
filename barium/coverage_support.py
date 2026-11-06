@@ -76,5 +76,5 @@ with open("chars.txt", "w+") as out:
 
 print()
 
-print("在基礎當務字集裡面的字：", in_charset)
+print(f"在基礎當務字集裡面的字：{in_charset} / {len(global_charset)}")
 print(f"覆蓋率： 約 { round(in_charset / len(global_charset) * 100, 2) } %")
