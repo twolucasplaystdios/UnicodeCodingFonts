@@ -10,20 +10,25 @@
 
 覆蓋率：約$32.1\%$
 
-## 專案根目錄測試方式 （Linux Bash）
+## 專案根目錄測試方式 
 
 ```bash
 # 下載此專案
 git clone https://github.com/twolucasplaystdios/UnicodeCodingFonts.git
 
-# 啟動虛擬環境
+# 建立虛擬環境
 python -m venv .venv
+
+# 啟動虛擬環境（Linux Bash）
 source .venv/bin/activate
+
+# 啟動虛擬環境（Windows PowerShell）
+.venv/Scripts/Activate.ps1
 
 # 安裝需要模組
 pip install -r requirements.txt
 
-# 在專案根目錄
+# 在專案根目錄執行
 python -m barium.coverage_support
 ```
 

@@ -1,10 +1,12 @@
 from fontTools.ttLib import TTFont
 import os
+import subprocess
+
+from rich import print
 
 from fnt_path_connector import local_base_dir
 
-
-
+subprocess.call("clear")
 
 def get_font_characters(font_path):
     # 載入字型檔案 (支援 ttf, otf, woff 等)
@@ -49,18 +51,30 @@ global_charset_dir = os.path.join(local_base_dir, "globals/jf7000.txt")
 with open(global_charset_dir, "r") as file:
     global_charset = file.read()
 
-with open("chars.txt", "w+") as out:
-    out.write("".join(all_chars))
+# with open("filled_chars.txt", "w+") as out:
+#     out.write("".join(all_chars))
+
+
 
 in_charset = 0
+
+final_chars = []
+c_id = 0
 
 for c in global_charset:
     if c in all_chars:
         in_charset += 1
     else:
+        final_chars.append(c)
+        if (c_id % 30 == 0):
+            final_chars.append("\n")
         print(c, end="")
+    c_id += 1
+
+with open("chars.txt", "w+") as out:
+    out.write("".join(final_chars))
 
 print()
 
-print("在當務字集裡面的字：", in_charset)
-print("覆蓋率", in_charset / len(global_charset))
+print("在基礎當務字集裡面的字：", in_charset)
+print(f"覆蓋率： 約 { round(in_charset / len(global_charset) * 100, 2) } %")
