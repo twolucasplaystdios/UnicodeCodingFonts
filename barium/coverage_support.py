@@ -1,6 +1,7 @@
 from fontTools.ttLib import TTFont
 import os
 import subprocess
+import datetime
 
 from rich import print
 
@@ -55,26 +56,32 @@ with open(global_charset_dir, "r") as file:
 #     out.write("".join(all_chars))
 
 
-
-in_charset = 0
-
 final_chars = []
+in_charset = 0
 c_id = 0
 
 for c in global_charset:
     if c in all_chars:
         in_charset += 1
     else:
-        final_chars.append(c)
-        if (c_id % 30 == 0):
-            final_chars.append("\n")
-        print(c, end="")
-    c_id += 1
+        c_id += 1
+        final_chars.append(c)        
 
-with open("chars.txt", "w+") as out:
-    out.write("".join(final_chars))
+final_str = "".join(final_chars)
+
+output_content = "\n".join(final_str[i:i+30] for i in range(0, len(final_str), 30))
+
+curr_datetime = datetime.datetime.now()  # 當前本地日期與時間
+str_dt = curr_datetime.strftime("%Y-%m-%d-%H-%M-%S")
+
+with open(os.path.join(base_dir, f"chars_missed.txt"), "w+") as curr_out:
+    with open(os.path.join(base_dir, f"chars_missed-{str_dt}.txt"), "w+") as old_out:
+        final = curr_out.read()
+        old_out.write(final)
+        curr_out.write(output_content)
 
 print()
+print(f"資料（尚未在字集）已儲存成功！")
 
 print(f"在基礎當務字集裡面的字：{in_charset} / {len(global_charset)}")
 print(f"覆蓋率： 約 { round(in_charset / len(global_charset) * 100, 2) } %")
