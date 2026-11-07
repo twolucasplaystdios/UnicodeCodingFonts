@@ -75,7 +75,7 @@ curr_datetime = datetime.datetime.now()  # 當前本地日期與時間
 str_dt = curr_datetime.strftime("%Y-%m-%d-%H-%M-%S")
 
 with open(os.path.join(base_dir, f"chars_missed.txt"), "w+") as curr_out:
-    with open(os.path.join(base_dir, f"chars_missed-{str_dt}.txt"), "w+") as old_out:
+    with open(os.path.join(base_dir, f"chars_missed_ref-{str_dt}.txt"), "w+") as old_out:
         final = curr_out.read()
         old_out.write(final)
         curr_out.write(output_content)

@@ -10,7 +10,7 @@
 
 覆蓋率：約32.7\%
 
-## 專案根目錄測試方式 
+## 專案根目錄測試覆蓋率方式 
 
 ```bash
 # 下載此專案
@@ -28,7 +28,7 @@ source .venv/bin/activate
 # 安裝需要模組
 pip install -r requirements.txt
 
-# 在專案根目錄執行
+# 在專案根目錄執行覆蓋率
 python -m barium.coverage_support
 ```
 
