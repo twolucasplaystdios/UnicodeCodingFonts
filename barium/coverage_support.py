@@ -39,7 +39,7 @@ def get_font_characters(font_path):
 
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-font_file = os.path.join(base_dir, "barium.ttf")
+font_file = os.path.join(base_dir, "exports/BariumMono/OpenType-TT/barium.ttf")
 
 all_chars = get_font_characters(font_file)
 
@@ -47,10 +47,11 @@ all_chars = get_font_characters(font_file)
 print(f"總共找到 {len(all_chars)} 個可用字元")
 
 global_charset = ""
-global_charset_dir = os.path.join(local_base_dir, "globals/jf7000.txt")
+global_charset_dir = os.path.join(local_base_dir, "globals/assets/jf7000.txt")
 
-with open(global_charset_dir, "r") as file:
-    global_charset = file.read()
+with open(global_charset_dir, "r", encoding="utf8") as file:
+    global_charset = file.read().split("\n")
+    global_charset = "".join(global_charset)
 
 # with open("filled_chars.txt", "w+") as out:
 #     out.write("".join(all_chars))
@@ -61,11 +62,12 @@ in_charset = 0
 c_id = 0
 
 for c in global_charset:
-    if c in all_chars:
-        in_charset += 1
-    else:
-        c_id += 1
-        final_chars.append(c)        
+    if c != "\n" and c != " ":
+        if c in all_chars:
+            in_charset += 1
+        else:
+            c_id += 1
+            final_chars.append(c)        
 
 final_str = "".join(final_chars)
 

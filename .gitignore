@@ -19,3 +19,7 @@ __pycache__/
 # Git
 
 .git/
+
+# FontLab Backup
+
+*.backup/

@@ -20,4 +20,6 @@
 
 ### 其他詳細資訊
 
+[細節](/barium/README.md)
+
 [設定](/barium/README.md#設定)
