@@ -10,12 +10,12 @@ from fnt_path_connector import local_base_dir
 subprocess.call("clear")
 
 def get_font_characters(font_path):
-    """給出字體字元數量
+    """給出字體字元串列
 
-    Args:
-        font_path (str): 字體路徑
+    參數:
+        `font_path` (str): 字體路徑
 
-    Returns:
+    回傳:
         list: 字體字元串列
     """
     
@@ -83,15 +83,31 @@ final_str = "".join(final_chars)
 output_content = "\n".join(final_str[i:i+30] for i in range(0, len(final_str), 30))
 
 curr_datetime = datetime.datetime.now()  # 當前本地日期與時間
-str_dt = curr_datetime.strftime("%Y-%m-%d-%H-%M-%S")
+str_dt = curr_datetime.strftime("%Y-%m-%d")
+
+old_final = ""
+
+
+
+with open(os.path.join(base_dir, f"chars_missed.txt"), "r+") as read_curr_out:
+    old_final = read_curr_out.read().replace("\n", "")
+
+
+print(old_final)
 
 with open(os.path.join(base_dir, f"chars_missed.txt"), "w+") as curr_out:
+    
     with open(os.path.join(base_dir, f"chars_missed_ref-{str_dt}.txt"), "w+") as old_out:
-        final = curr_out.read()
-        old_out.write(final)
+        a = set(final_str)
+        b = set(old_final)
+        diff_content = "".join(b - a)
+        
+        print(len(diff_content))
+        
+        old_out.write(diff_content)
+                
         curr_out.write(output_content)
 
-print()
 print(f"資料（尚未在字集）已儲存成功！")
 
 print(f"在基礎當務字集裡面的字：{in_charset} / {len(global_charset)}")
