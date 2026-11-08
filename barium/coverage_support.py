@@ -10,6 +10,15 @@ from fnt_path_connector import local_base_dir
 subprocess.call("clear")
 
 def get_font_characters(font_path):
+    """給出字體字元數量
+
+    Args:
+        font_path (str): 字體路徑
+
+    Returns:
+        list: 字體字元串列
+    """
+    
     # 載入字型檔案 (支援 ttf, otf, woff 等)
     font = TTFont(font_path)
     
