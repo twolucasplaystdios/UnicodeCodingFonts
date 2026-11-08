@@ -16,7 +16,7 @@
 
 [`Caesium` Github](https://github.com/alphaArgon/Caesium)
 
-[`Barium Mono` 連結](/fonts/barium/README.md)
+[`Barium Mono` 連結](/barium/README.md)
 
 ### 其他詳細資訊
 
